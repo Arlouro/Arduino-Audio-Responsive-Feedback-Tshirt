@@ -18,24 +18,6 @@ const soundColors = {
     "Emergency Vehicle": "#ff3838"
 };
 
-document.getElementById('probabilityThreshold').addEventListener('input', (e) => {
-    probabilityThreshold = parseFloat(e.target.value);
-    document.getElementById('probabilityValue').textContent = probabilityThreshold.toFixed(2);
-    addToSerialOutput(`📊 Probability threshold updated: ${probabilityThreshold}`);
-});
-
-document.getElementById('overlapFactor').addEventListener('input', (e) => {
-    overlapFactor = parseFloat(e.target.value);
-    document.getElementById('overlapValue').textContent = overlapFactor.toFixed(2);
-    addToSerialOutput(`🔄 Overlap factor updated: ${overlapFactor}`);
-});
-
-document.getElementById('arduinoThreshold').addEventListener('input', (e) => {
-    arduinoThreshold = parseFloat(e.target.value);
-    document.getElementById('thresholdValue').textContent = arduinoThreshold.toFixed(2);
-    addToSerialOutput(`🎯 Arduino threshold updated: ${arduinoThreshold}`);
-});
-
 async function createModel() {
     try {
         updateStatus('Loading Teachable Machine model...', 'processing');
