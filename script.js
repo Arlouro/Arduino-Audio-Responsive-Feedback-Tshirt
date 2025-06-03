@@ -321,13 +321,6 @@ window.addEventListener('beforeunload', async () => {
 });
 
 window.addEventListener('load', () => {
-    addToSerialOutput('🚀 Improved web application loaded');
-    addToSerialOutput('📋 Instructions:');
-    addToSerialOutput('1. Adjust audio settings if needed');
-    addToSerialOutput('2. Click "Connect Arduino" to establish serial connection');
-    addToSerialOutput('3. Test Arduino with the test buttons');
-    addToSerialOutput('4. Click "Start Recognition" to begin improved sound detection');
-    
     init();
     
     navigator.mediaDevices.getUserMedia({ audio: true })
