@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Recognition for Arduino T-Shirt</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Audio Recognition</h1>
+            <p class="subtitle">Interface Technologies Project</p>
+        </header>
+        
+        <div id="status" class="status-panel">
+            <div class="status-text">Initialize system to begin audio analysis</div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn primary" onclick="startRecognition()">Start Recognition</button>
+            <button id="stopBtn" class="btn" onclick="stopRecognition()" disabled>Stop Recognition</button>
+            <button id="connectArduino" class="btn" onclick="connectToArduino()">Connect Arduino</button>
+        </div>
+        
+        <div class="arduino-panel">
+            <span>Arduino Status: </span>
+            <span id="arduinoStatus" class="arduino-status disconnected">Not Connected</span>
+        </div>
+
+        <div class="test-grid">
+            <button class="test-btn" onclick="testArduinoCommand('Doorbell')">Test Doorbell</button>
+            <button class="test-btn" onclick="testArduinoCommand('Crying Baby')">Test Crying Baby</button>
+            <button class="test-btn" onclick="testArduinoCommand('Emergency Vehicle')">Test Emergency</button>
+            <button class="test-btn" onclick="testArduinoCommand('Alarm')">Test Alarm</button>
+        </div>
+        
+        <div class="results-panel">
+            <h3 class="results-title">Detection Results</h3>
+            <div class="detection-result">
+                <div id="result" class="detected-sound">Awaiting audio input</div>
+                <div id="confidence" class="confidence-text"></div>
+            </div>
+            <div class="debug-info" id="debugInfo">System ready for audio processing</div>
+            
+            <div class="confidence-bars" id="confidenceBars"></div>
+        </div>
+        
+        <div class="serial-panel">
+            <h3 class="serial-title">System Output</h3>
+            <div id="serialOutput" class="serial-output">Waiting for system initialization...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
