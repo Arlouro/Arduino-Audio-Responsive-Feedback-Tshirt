@@ -176,7 +176,7 @@ async function startRecognition() {
             
             updateConfidenceBars(scores);
             
-            if (confidence > 0.2) { 
+            if (confidence > 0.85) { 
                 document.getElementById('result').innerHTML = 
                     `<span style="color: ${soundColors[predictedLabel] || '#FFF'}">${predictedLabel}</span>`;
                 document.getElementById('confidence').textContent = 
