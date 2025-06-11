@@ -1,4 +1,4 @@
-# Arduino-Deaf-Feedback-Tshirt
+# Arduino-Audio-Responsive-Feedback-Tshirt
 
 This project uses a browser-based Teachable Machine sound recognition model to detect specific audio events and communicate them to an Arduino-powered T-Shirt via the Web Serial API. The T-Shirt reacts using an LED and vibration motor to convey alerts through color and haptic feedback.
 
