@@ -24,11 +24,13 @@ This project uses a browser-based Teachable Machine sound recognition model to d
 - 🎛️ Manual Testing Buttons to simulate alerts
 
 ## 🎧 Supported Sounds & Reactions
-Sound	LED Color	Vibration Pattern
-Doorbell	Green	2 quick pulses
-Crying Baby	Blue	4 short pulses
-Emergency Vehicle	Red	Constant vibration
-Alarm	Yellow	3 long pulses
+| Sound             | LED Color    | Vibration Pattern  |
+| ----------------- | ------------ | ------------------ |
+| Doorbell          | Green        | 2 quick pulses     |
+| Crying Baby       | Blue         | 4 short pulses     |
+| Emergency Vehicle | Red          | Constant vibration |
+| Alarm             | Orange/Amber | 3 long pulses      |
+
 
 ## 🚀 How to Run
 ### 1. Prerequisites
@@ -40,14 +42,14 @@ Alarm	Yellow	3 long pulses
 
   - RGB LED on pin 6
 
-  - Vibration Motor on pin 3
+  - Vibration Motors on pin 3
 
   - Button (for acknowledgment) on pin 7
 
 - Microphone access enabled
 
 ### 2. Upload Arduino Code
-Upload the contents of `arduino.ino` (provided in the Arduino code section above) to your Arduino board via the Arduino IDE.
+Upload the contents of `Final_Project.ino` to your Arduino board via the Arduino IDE.
 
 ### 3. Launch Dashboard
 Start a simple HTTP server:
