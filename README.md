@@ -29,7 +29,7 @@ This project uses a browser-based Teachable Machine sound recognition model to d
 | Doorbell          | Green        | 2 quick pulses     |
 | Crying Baby       | Blue         | 4 short pulses     |
 | Emergency Vehicle | Red          | Constant vibration |
-| Alarm             | Orange/Amber | 3 long pulses      |
+| Alarm             | Yellow       | 3 long pulses      |
 
 
 ## 🚀 How to Run
